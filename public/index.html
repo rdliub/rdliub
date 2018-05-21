@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Simple Blockchain Example</h1>
+
+    <div>
+    	  <h3> Status Message:  </h3>
+        <h3 id = "userAddress">  </h3>
+        <h3 id = "status">  </h3>
+    </div>
+
+    <button onclick="depositFunds()"> Deposit 100 ETH</button>
+    <button onclick="withdrawFunds()"> Withdraw 100 ETH</button>
+    <button onclick="getFunds()"> Get Balance ETH</button>
+
+    <script>
+      function depositFunds() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log('Button pressed 1');
+           document.getElementById("status").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "deposit-funds", true);
+        xhttp.send();
+      }
+      function withdrawFunds() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log('Button pressed 2');
+            document.getElementById("status").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "withdraw-funds", true);
+        xhttp.send();
+      }
+      function getFunds() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log('Button pressed 3');
+            document.getElementById("status").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "get-funds", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
