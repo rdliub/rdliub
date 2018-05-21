@@ -50,16 +50,6 @@ $ yarn start
 $ url: http://localhost:3000
 ```
 
-### Authors
-
-Buildr had the following contributors who helped in building the platform.
-
-| Author |  
-| ------ |
-| Jacari Boboye | 
-| Melissa Rose | 
-| Const | 
-
 
 ### Development
 
